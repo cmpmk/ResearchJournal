@@ -1,0 +1,40 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage{titling}
+\pdfpagewidth=8.5in \pdfpageheight=11in
+\setlength{\droptitle}{-13em}
+\title{Research Journal}
+\author{Christopher Malek}
+\date{}
+
+\newcommand{\bt}{\begin{tcolorbox}}
+\newcommand{\edtog}{$\epsilon_{d}/\epsilon_{g}$}
+\begin{document}
+\maketitle
+\section{Preliminary}
+\textbf{Streaming Instability Runs}\\
+1) d2g\_test: set $\epsilon_{d}/\epsilon_{g} = 0.1$\\
+2) res\_test: $N_{x} = 384$, $N_{z} = 32$, $L_{z} = 0.08772845953$\\
+3) log\_test: grid\_func = 'log', temp\_powerlaw = 0.5\\
+4) cs\_test: $N_{x} = 2048$, $N_{z} = 32$, $L_{z} = 0.0164142647777$, $cs_{0} = 0.1$\\
+
+\noindent Then repeat 1-4 in 2D in the midplane: \edtog = 0.1
+
+\section{05/01/18}
+Positive pressure gradient causes particles to be pushed out. Three new tests to run:\\
+1) d2g: switch gas backreaction off\\
+2) cs: remove the inner particle boundary ($rp_{int}=0.6$ default)\\
+3) midplane: set \edtog = 1.0\\
+
+\noindent Flattening gradient kills Streaming Instability\\
+axis=0 in Python selects the azimuthal direction\\
+
+Plotting a 1D average against time: loop through VAR files, average both dust and gas\\
+\* Fig. 7 from Lyra and Kuchner for reference.\\
+
+
+
+
+\end{document}
