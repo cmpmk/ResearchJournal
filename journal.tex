@@ -13,15 +13,17 @@
 \newcommand{\edtog}{$\epsilon_{d}/\epsilon_{g}$}
 \begin{document}
 \maketitle
+%---------------------------------------------------------%
 \section{Preliminary}
 \textbf{Streaming Instability Runs}\\
-1) d2g\_test: set $\epsilon_{d}/\epsilon_{g} = 0.1$\\
-2) res\_test: $N_{x} = 384$, $N_{z} = 32$, $L_{z} = 0.08772845953$\\
-3) log\_test: grid\_func = 'log', temp\_powerlaw = 0.5\\
-4) cs\_test: $N_{x} = 2048$, $N_{z} = 32$, $L_{z} = 0.0164142647777$, $cs_{0} = 0.1$\\
-
+\begin{enumerate}
+\item d2g\_test: set $\epsilon_{d}/\epsilon_{g} = 0.1$\\
+\item res\_test: $N_{x} = 384$, $N_{z} = 32$, $L_{z} = 0.08772845953$\\
+\item log\_test: grid\_func = 'log', temp\_powerlaw = 0.5\\
+\item cs\_test: $N_{x} = 2048$, $N_{z} = 32$, $L_{z} = 0.0164142647777$, $cs_{0} = 0.1$\\
+\end{enumerate}
 \noindent Then repeat 1-4 in 2D in the midplane: \edtog = 0.1
-
+%---------------------------------------------------------%
 \section{05/01/18}
 Positive pressure gradient causes particles to be pushed out. Three new tests to run:\\
 1) d2g: switch gas backreaction off\\
@@ -33,7 +35,7 @@ axis=0 in Python selects the azimuthal direction\\
 
 Plotting a 1D average against time: loop through VAR files, average both dust and gas\\
 \* Fig. 7 from Lyra and Kuchner for reference.\\
-
+%---------------------------------------------------------%
 
 
 
